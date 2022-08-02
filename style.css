@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    font-size: 16px;
+    background-color: #ececec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 850px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 32px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.app.disabled :where(.editor-panel, .reset-filters, .save-img) {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.widget-header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.wrapper {
+    display: flex;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.editor-panel {
+    min-width: 280px;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.editor-panel .title {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.editor-panel .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn {
+    height: 40px;
+    font-size: 0.875rem;
+    color: #6c757d;
+    border-radius: 4px;
+    background-color: #eee;
+    border: 1px solid #6c757d;
+    flex: 1;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #fff;
+}
+.btn-active, 
+.btn-primary {
+    color: #fff;
+    background-color: #5372f0;
+    border-color: #5372f0;
+}
+
+.btn-active:hover,
+.btn-primary:hover {
+    color: #fff;
+    background-color: #364a9a;
+    border-color: #364a9a;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.btn-secondary:hover {
+    background-color: #555d63;
+    border-color: #555d63;
+}
+
+.editor-panel .slider {
+    margin-top: 0.75rem;
+}
+
+.editor-panel .slider .filter-info {
+    display: flex;
+    color: #464646;
+    font-size: 00.875rem;
+    justify-content: space-between;
+}
+
+.slider input {
+    width: 100%;
+    height: 5px;
+    accent-color: #5372f0;
+}
+
+.editor-panel .rotate {
+    margin-top: 1rem;
+}
+
+.preview-img {
+    height: 335px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.preview-img img {
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls .btn {
+    flex: none;
+}
+
